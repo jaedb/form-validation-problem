@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Form validation problem</title>
-    <link rel="stylesheet" href="/dist/index.css" />
-    <script type="text/javascript" src="/dist/index.js" />
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" src="index.js"></script>
 </head>
 
 <body>
     <form method='post' action=''>
         <h1>Fill out this awesome form</h1>
+        <noscript>
+            <p class="message message--bad">Please enable javascript to use this form</p>
+        </noscript>
         <fieldset>
             <h3>Your details</h3>
             <p>
@@ -76,7 +79,7 @@
         </fieldset>
         <fieldset>
             <p>
-                <input type='submit' value='Create account'>
+                <input type='submit' id="submit" value='Create account' disabled="disabled">
             </p>
         </fieldset>
     </form>

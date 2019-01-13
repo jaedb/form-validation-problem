@@ -1,0 +1,32 @@
+{
+  "name": "form-validation-problem",
+  "version": "1.0.0",
+  "author": "James Barnsley",
+  "description": "Form Validation Problem",
+  "repository": "https://github.com/jaedb/form-validation-problem",
+  "licenses": {
+    "type": "Apache License",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+  },
+  "devDependencies": {
+    "css-loader": "^2",
+    "expose-loader": "^0.7",
+    "file-loader": "^3",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.10.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7",
+    "style-loader": "^0.23",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4",
+    "webpack-cli": "^3.2.1"
+  },
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "prod": "webpack --mode production --watch"
+  },
+  "dependencies": {
+    "jquery": "^3",
+    "jquery-validation": "^1"
+  }
+}

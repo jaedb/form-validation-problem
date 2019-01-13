@@ -1,0 +1,131 @@
+
+/*
+    -------------------------------------------------------------------
+    Form styles
+    -------------------------------------------------------------------
+*/
+form {
+    background: #fff;
+    padding: 1em 1.25em;
+    border: solid 1px #ccc;
+    border-radius: .25em;
+
+    fieldset {
+        border: none;
+        padding: 0;
+
+        & + fieldset {
+            border-top: solid 1px #eee;
+        }
+    }
+
+    label {
+        vertical-align: middle;
+
+        & + input[type=checkbox] {
+            margin-left: 1em;
+        }
+    }
+    /*
+        Note: Don't change font-family on password inputs,
+        unless you want tiny •••• bullets :)
+    */
+    input[type='text'],
+    input[type='submit'] {
+        font-family: sans-serif;
+    }
+
+    input[type='text'],
+    input[type='password'],
+    input[type='submit'],
+    select {
+        width: 100%;
+        max-width: 16em;
+        box-sizing: border-box;
+        padding: .5em .5em;
+        border: solid 1px #ddd;
+        font-size: 1em;
+        border-radius: .25em;
+        -webkit-appearance: none;
+        color: #555;
+
+        &:focus {                
+            outline: none;
+            border-color: #0B77DB;
+            box-shadow: 0 0 6px rgba(48, 140, 255, 0.25);
+        }
+    }
+
+    select {
+        width: 100%;
+        max-width: 17em;
+        box-sizing: border-box;
+    }
+
+    input[type='submit'] {
+        border: solid 1px transparent;
+        padding: .75em 1em;
+        background: #0B77DB;
+        color: #fff;
+        font-size: .875em;
+        cursor: pointer;
+
+        &:hover {
+            background: #3C9AA7;
+        }
+
+        &:active {
+            background: #333;
+            border-color: #333;
+        }
+
+        &:focus {
+            background: #3D6EAC;
+        }
+    }
+
+    .label {
+        width: 100%;
+        max-width: 10em;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+
+    .error {
+        & > input,
+        & > select,
+        & > label,
+        & > .label {
+            color: red;
+        }
+
+        & > input,
+        & > select {
+            border-color: red;
+        }
+    }
+
+    .message {
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid transparent;
+
+        &--good {
+            background: lighten(green, 65%);
+            color: green;
+            border-color: green;
+        }
+
+        &--warning {
+            background: lighten(orange, 40%);
+            color: orange;
+            border-color: orange;
+        }
+
+        &--bad {
+            background: lighten(red, 40%);
+            color: red;
+            border-color: red;
+        }
+    }
+}
