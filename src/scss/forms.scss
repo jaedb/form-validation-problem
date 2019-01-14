@@ -97,6 +97,11 @@ form {
         max-width: 10em;
         box-sizing: border-box;
         display: inline-block;
+
+        @media(max-width: 500px){ 
+            display: block;
+            max-width: none;
+        }
     }
 
     .field {

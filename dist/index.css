@@ -92,6 +92,10 @@ form {
     max-width: 10em;
     box-sizing: border-box;
     display: inline-block; }
+    @media (max-width: 500px) {
+      form .label {
+        display: block;
+        max-width: none; } }
   form .field--error input,
   form .field--error select {
     border-color: red; }
