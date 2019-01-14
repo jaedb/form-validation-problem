@@ -10602,11 +10602,6 @@ $(document).ready(function(){
 		// Valid; proceed to submit
 		} else {
 			form.find('input[type="submit"]').val('Submitting').setAttribute('disabled','disabled');
-
-			// TESTING
-			e.preventDefault();
-
-			return;
 		}
 	});
 });
