@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Form validation problem</title>
+
     <link rel="stylesheet" href="index.css" />
-    <script type="text/javascript" src="index.js"></script>
+
+    <!-- 
+        Include our JS package
+        We defer loading so the page paints markup and CSS before
+        loading JS. This could also be included in the footer to 
+        achieve the similar effect in older browsers.
+    -->
+    <script type="text/javascript" src="index.js" defer></script>
 </head>
 
 <body>
@@ -15,13 +23,13 @@
         </noscript>
         <fieldset>
             <h3>Your details</h3>
-            <p>
+            <p class="field">
                 <label class='label' for='email'>
                     Email
                 </label>
                 <input type='text' id='email' name='email'>
             </p>
-            <p>
+            <p class="field">
                 <label class='label' for='password'>
                     Password
                 </label>
@@ -31,7 +39,7 @@
 
         <fieldset>
             <h3>Your animal</h3>
-            <p>
+            <p class="field">
                 <label class='label' for='colour'>
                     Colour
                 </label>
@@ -44,7 +52,7 @@
                     <option value='brown'>Brown</option>
                 </select>
             </p>
-            <p>
+            <p class="field">
                 <span class="label">
                     Animal
                 </span>
@@ -70,7 +78,7 @@
                 </label>
 
             </p>
-            <p>
+            <p class="field">
                 <label class='label' for='tiger_type'>
                     Type of tiger
                 </label>
@@ -78,7 +86,7 @@
             </p>
         </fieldset>
         <fieldset>
-            <p>
+            <p class="field field--actions">
                 <input type='submit' id="submit" value='Create account' disabled="disabled">
             </p>
         </fieldset>

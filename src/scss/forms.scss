@@ -54,6 +54,14 @@ form {
             border-color: #0B77DB;
             box-shadow: 0 0 6px rgba(48, 140, 255, 0.25);
         }
+
+        &[disabled],
+        &[disabled="disabled"] {
+            opacity: 0.5;
+            background: #EEEEEE;
+            color: #AAAAAA;
+            cursor: not-allowed;
+        }
     }
 
     select {
@@ -91,17 +99,20 @@ form {
         display: inline-block;
     }
 
-    .error {
-        & > input,
-        & > select,
-        & > label,
-        & > .label {
-            color: red;
+    .field {
+        &--error {
+            input,
+            select {
+                border-color: red;
+            }
         }
 
-        & > input,
-        & > select {
-            border-color: red;
+        &__message {
+            font-size: 0.75em;
+
+            &--bad {
+                color: red;
+            }
         }
     }
 
